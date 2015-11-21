@@ -64,6 +64,10 @@
     if ([SKPaymentQueue defaultQueue]) {
         [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
     }
+    requestProductsBlock = nil;
+    buyProductCompleteBlock = nil;
+    restoreCompletedBlock = nil;
+    checkReceiptCompleteBlock = nil;
 }
 
 -(BOOL)isPurchasedProductsIdentifier:(NSString*)productID
